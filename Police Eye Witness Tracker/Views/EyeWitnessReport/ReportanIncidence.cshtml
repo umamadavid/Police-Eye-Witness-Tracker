@@ -1,0 +1,56 @@
+﻿@model EyeWitnessReport
+
+<form method="post">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Report an Incidence</h2>
+			<hr />
+		</div>
+		<div asp-validation-summary="All"></div>
+		<div class="mb-3">
+			<label asp-for="FirstName">First Name</label>
+			<input asp-for="FirstName" class="form-control" style="width:50%" />
+			<span asp-validation-for="FirstName" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="LastName">Last Name</label>
+			<input asp-for="LastName" class="form-control" style="width:50%" />
+			<span asp-validation-for="LastName" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="PhoneNum">Phone Number</label>
+			<input asp-for="PhoneNum" class="form-control" style="width:50%" />
+			<span asp-validation-for="PhoneNum" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="ContactAddress">Contact Address</label>
+			<input asp-for="ContactAddress" class="form-control" style="width:50%"/>
+			<span asp-validation-for="ContactAddress" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="NatureofIncidence">Nature of Incidence</label>
+			<input asp-for="NatureofIncidence" class="form-control" style="width:50%" />
+			<span asp-validation-for="NatureofIncidence" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="LocationofIncidence">Location of Incidence</label>
+			<input asp-for="LocationofIncidence" class="form-control" style="width:50%" />
+			<span asp-validation-for="NatureofIncidence" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="IncidenceReportNarration">Incidence Report Narration</label>
+			<input asp-for="IncidenceReportNarration" class="form-control" style="width:50%"/>
+			<span asp-validation-for="IncidenceReportNarration" class="text-danger"></span>
+		</div>
+		<button type="submit" class="btn btn-primary" style="width:150px">Submit Report</button>
+		<a asp-controller="EyeWitnessReport" asp-action="Index" class="btn btn-secondary" style="width:150px">
+			Back to Home
+		</a>
+	</div>
+</form>
+
+@section Scripts{
+@{
+	<partial name="_ValidationScriptsPartial" />
+}
+}
